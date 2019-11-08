@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>places</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let place of places">
+      <ion-item>
+        <ion-icon *ngIf="place.type == 'h'" name="home" item-start></ion-icon>
+        <ion-icon
+          *ngIf="place.type == 'r'"
+          name="restaurant"
+          item-start
+        ></ion-icon>
+        <ion-icon
+          *ngIf="place.type == 'p'"
+          name="football"
+          item-start
+        ></ion-icon>
+        {{ place.name }}
+      </ion-item>
+      <ion-item-options side="right">
+        <button
+          ion-button
+          color="secondary"
+          (click)="
+            editPlace(
+              place.key,
+              place.type,
+              place.name,
+              place.lat,
+              place.lng,
+              place.phone
+            )
+          "
+        >
+          <ion-icon name="ios-create"></ion-icon>
+          Edit
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

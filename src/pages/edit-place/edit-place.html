@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Edit Place</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Place type</ion-label>
+      <ion-select [(ngModel)]="place.type">
+        <ion-option value="h"
+          ><ion-icon name="home"></ion-icon> Home</ion-option
+        >
+        <ion-option value="r"
+          ><ion-icon name="restaurant"></ion-icon> Restaurant</ion-option
+        >
+        <ion-option value="p"
+          ><ion-icon name="football"></ion-icon> Park</ion-option
+        >
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Place Name</ion-label>
+      <ion-input type="text" [(ngModel)]="place.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Place phone number</ion-label>
+      <ion-input type="text" [(ngModel)]="place.phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Latitude</ion-label>
+      <ion-input type="number" [(ngModel)]="place.lat"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Longitude</ion-label>
+      <ion-input type="number" [(ngModel)]="place.lng"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block icon-end (click)="beforeUpdate()">
+    Update Place <ion-icon name="ios-create"></ion-icon>
+  </button>
+</ion-content>
