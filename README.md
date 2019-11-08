@@ -4,13 +4,16 @@ Simple Map App powered by ionicframework v3.
 clone or download the project and follow these steps:
 
 1st step: install ionic and cordova.
-$ npm install -g ionic cordova
+
+    $ npm install -g ionic cordova
 
 2nd step: install required files.
-$ npm install
+
+    $ npm install
 
 3rd step: run the app
-$ ionic serve
+
+    $ ionic serve
 
 # How to use the app (the Instructions)
 
