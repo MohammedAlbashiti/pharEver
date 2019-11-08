@@ -10,6 +10,8 @@ clone or download the project and follow these steps:
 2nd step: install required files.
 
     $ npm install
+    $ npm install angularfire2 firebase@6.6.1 promise-polyfill --save
+    $ npm install rxjs@6.3.3 rxjs-compat@6.5.3 promise-polyfill --save
 
 3rd step: run the app
 
